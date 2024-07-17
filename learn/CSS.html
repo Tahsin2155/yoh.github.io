@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <div id="header">
+        <h1>yoh!</h1>
+    </div>
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Learn</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Feed</a></li>
+        </ul>
+    </nav>
+    <div id="main-content">
+        <h1>1. Notes:-</h1>
+        <h4>What is CSS:</h4>
+        <p>CSS stands for Cascading Style Sheets. It is used to describe the presentation of a document written in HTML or XML. CSS defines how HTML elements are to be displayed on screen, paper, or in other media.</p>
+        <br>
+        <h4>Syntax of CSS:</h4>
+        <p>A CSS rule-set consists of a selector and a declaration block:</p>
+        <pre><b>CSS</b>
+        selector {
+            property: value;
+        }</pre>
+        <li><b>Selector: </b>Points to the HTML element you want to style.</li>
+        <li><b>Property: </b>The property you want to change (e.g., color, font-size).</li>
+        <li><b>Value: </b>The value of the property (e.g., red, 16px).</li>
+        <br>
+        <b>Example:</b><br>
+        <pre><b>HTML</b>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;style&gt;
+            p {
+              color: blue;
+              font-size: 16px;
+            }
+          &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </pre>
+        <p>In the example above, all `&lt;p&gt;` elements will be styled with blue color and 16px font size.</p>
+        <br>
+        <h4>Applying CSS:</h4>
+        <br>
+        <b>Inline CSS:</b>
+        <p>Inline CSS is used to apply a unique style to a single HTML element. Inline CSS uses the `style` attribute of an HTML element.</p>
+        <pre><b>HTML</b>
+        &lt;p style="color: blue; font-size: 16px;"&gt;This is a paragraph.&lt;/p&gt;
+        </pre><br>
+        <br>
+        <b>Internal CSS:</b>
+        <p>Internal CSS is used to define a style for a single HTML page. You define internal CSS in the `&lt;head&gt;` section inside a `&lt;style&gt;` element.</p>
+        <pre><b>HTML</b>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+            &lt;style&gt;
+                p {
+                color: blue;
+                font-size: 16px;                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </pre><br>
+        <br>
+        <b>External CSS:</b>
+        <p>External CSS is used to define the style for many HTML pages. With an external stylesheet, you can change the look of an entire website by changing just one file. Each HTML page must include a reference to the external stylesheet file inside the `&lt;link&gt;` element, inside the `&lt;head&gt;` section.</p>
+        <pre><b>HTML</b>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;head&gt;
+          &lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </pre><br>
+        <pre><b>style.css</b>
+        p {
+          color: blue;
+          font-size: 16px;
+        }
+    </pre><br>
+        <br>
+        <h4>Selectors:</h4>
+        <b>Basic Selectors:</b>
+        <li><b>Element Selector: </b>Selects elements based on the element name.</li>
+        <pre><b>CSS</b>
+        p {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <li><b>ID Selector: </b>Selects elements based on the element's `id` attribute. The ID selector is defined with a `#`.</li>
+        <pre><b>CSS</b>
+        #myId {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <li><b>Class Selector: </b>Selects elements based on the element's class attribute. The class selector is defined with a `.`.</li>
+        <pre><b>CSS</b>
+        .myClass {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <li><b>Universal Selector</b>Selects all elements.</li>
+        <pre><b>CSS</b>
+            * {
+                color: blue;
+              }
+        </pre><br>
+        <br>
+        <li><b>Group Selector: </b>Selects all the specified elements.</li>
+        <pre><b>CSS</b>
+        h1, h2, p {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <b>Combining Selectors:</b>
+        <li><b>Descendant Selector: </b>Selects all elements that are descendants of a specified element.</li>
+        <pre><b>CSS</b>
+        div p {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <li><b>Child Selector: </b>Selects all elements that are the children of a specified element.</li>
+        <pre><b>CSS</b>
+        div &gt; p {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <li><b>Adjacent Sibling Selector: </b>Selects an element that is directly after another specific element.</li>
+        <pre><b>CSS</b>
+        h1 + p {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <li><b>General Sibling Selector: </b>Selects all elements that are siblings of a specified element.</li>
+        <pre><b>CSS</b>
+        h1 ~ p {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <h4>Advanced Topics:</h4>
+        <b>Pseudo-classes:</b>
+        <p>Pseudo-classes are used to define the special state of an element.</p><br>
+        <li><b>:hover - </b>Selects elements when you mouse over them.</li>
+        <pre><b>CSS</b>
+        a:hover {
+            color: red;
+          }
+        </pre><br>
+        <br>
+        <li><b>:nth-child(n) - </b>Selects elements based on their index/position among siblings.</li>
+        <pre><b>CSS</b>
+        p:nth-child(2) {
+            color: blue;
+          }
+        </pre><br>
+        <br>
+        <b>Pseudo-elements:</b>
+        <p>Pseudo-elements are used to style specified parts of an element.</p><br>
+        <li><b>::before - </b>Inserts content before an element's content.</li>
+        <pre><b>CSS</b>
+        p:\:before {    
+            content: "Note: ";    color: red;
+          }
+        </pre><br>
+        <br>
+        <li><b>::after - </b>Inserts content after an element's content.</li>
+        <pre><b>CSS</b>
+        p::after {
+            content: " End of note.";
+            color: red;
+          }    
+        </pre><br>
+        <br>
+        <b>Box Model:</b>
+        <p>The CSS box model is a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.</p>
+        <pre><b>CSS</b>
+        div {
+          width: 300px;
+          padding: 25px;
+          border: 25px solid navy;
+          margin: 25px;
+        }
+        </pre><br>
+        <br>
+        <b>Flexbox:</b>
+        <p>Flexbox is a layout module that allows you to design complex layouts with ease.</p>
+        <pre><b>CSS</b>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        </pre><br>
+        <br>
+        <b>Grid:</b>
+        <p>CSS Grid Layout is a two-dimensional layout system for the web.</p>
+        <pre><b>CSS</b>
+        .container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+        }
+        </pre><br>
+        <br>
+        <b>Media Queries:</b>
+        <p>Media queries are used to apply different styles for different devices or screen sizes.</p>
+        <pre><b>CSS</b>
+        </pre><br>
+        <br>
+        <b>Transitions:</b>
+        <p>Transitions are used to create smooth changes over a specified duration.</p>
+        <pre><b>CSS</b>
+        div {
+          transition: width 2s;
+        }
+        div:hover {
+          width: 300px;
+        }
+        </pre><br>
+        <br>
+        <b>Animations:</b>
+        <p>Animations are used to animate the values of CSS properties.</p>
+        <pre><b>CSS</b>
+        @keyframes example {
+          from {background-color: red;}
+          to {background-color: yellow;}
+        }
+        div {
+          animation-name: example;
+          animation-duration: 4s;
+        }
+        </pre><br>
+        <br>
+        <h4>Conclusion:</h4>
+        <p>This overview covers the basic to advanced topics of CSS. There is much more to explore, including specific properties, browser compatibility issues, and CSS preprocessors like SASS and LESS. Practice by creating your own projects and experimenting with different styles to become proficient in CSS.</p>
+        
+        <hr>
+        <!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+        <hr><br>
+        <h1>Common CSS Properties :-</h1>
+        <h4>Text and Font Properties:</h4>
+        <br>
+        <b>color:</b>
+        <li><b>Description: </b>Sets the color of text.</li>
+        <li><b>Values: </b>&lt;color&gt;</li>
+        <li><b>Example: </b>color: red;</li>
+        <br>
+        <b>font-family:</b>
+        <li><b>Description: </b>Sets the font family of text.</li>
+        <li><b>Values: </b>&lt;generic-family&gt;, &lt;specific-family&gt;</li>
+        <li><b>Example: </b>font-family: Arial, Helvetica, sans-serif;</li>
+        <br>
+        <b>font-size:</b>
+        <li><b>Description: </b>Sets the font size of text.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;</li>
+        <li><b>Example: </b>font-size: 16px;</li>
+        <br>
+        <b>font-style:</b>
+        <li><b>Description: </b>Sets the font style of text.</li>
+        <li><b>Values: </b>normal, italic, oblique</li>
+        <li><b>Example: </b>font-style: italic;</li>
+        <br>
+        <b>font-weight:</b>
+        <li><b>Description: </b>Sets the font weight of text.</li>
+        <li><b>Values: </b>normal, bold, bolder, lighter, &lt;number&gt;</li>
+        <li><b>Example: </b>font-weight: bold;</li>
+        <br>
+        <b>line-height:</b>
+        <li><b>Description: </b>Sets the line height of text.</li>
+        <li><b>Values: </b>&lt;number&gt;, &lt;length&gt;, &lt;percentage&gt;, normal</li>
+        <li><b>Example: </b>line-height: 1.2;</li>
+        <br>
+        <b>text-align:</b>
+        <li><b>Description: </b>Sets the horizontal alignment of text.</li>
+        <li><b>Values: </b>left, right, center, justify</li>
+        <li><b>Example: </b>text-align: center;</li>
+        <br>
+        <b>text-decoration:</b>
+        <li><b>Description: </b>Sets the decoration of text.</li>
+        <li><b>Values: </b>none, underline, overline, line-through, blink</li>
+        <li><b>Example: </b>text-decoration: underline;</li>
+        <br>
+        <b>text-transform:</b>
+        <li><b>Description: </b>Controls the capitalization of text.</li>  
+        <li><b>Values: </b>none, capitalize, uppercase, lowercase</li>
+        <li><b>Example: </b>text-transform: uppercase;</li>
+        <br>
+        <b>letter-spacing:</b>
+        <li><b>Description: </b>Sets the spacing between characters in a text.</li>
+        <li><b>Values: </b>normal, &lt;length&gt;</li>  
+        <li><b>Example: </b>letter-spacing: 2px;</li>
+        <br>
+        <b>word-spacing:</b>
+        <li><b>Description:</b>Sets the spacing between words.</li>
+        <li><b>Values: </b>normal, &lt;length&gt;</li>
+        <li><b>Example: </b>word-spacing: 2px;</li>
+        <br>
+        <b>text-indent:</b>
+        <li><b>Description:</b> Sets the indentation of the first line of text.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;</li>
+        <li><b>Example: </b>text-indent: 2em;</li>
+        <br><br>
+    
+        <h4>Box Model Properties:</h4>
+        <br>
+        <b>width:</b>
+        <li><b>Description: </b>Sets the width of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, auto</li>
+        <li><b>Example: </b>width: 100px;</li>
+        <br>
+        <b>height:</b>
+        <li><b>Description: </b>Sets the height of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, auto</li>
+        <li><b>Example: </b>height: 100px;</li>
+        <br>
+        <b>margin:</b>
+        <li><b>Description: </b>Sets the margin for all four sides of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, auto</li>
+        <li><b>Example: </b>margin: 10px;</li>
+        <br>
+        <b>padding:</b>
+        <li><b>Description: </b>Sets the padding for all four sides of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;</li>
+        <li><b>Example: </b>padding: 10px;</li>
+        <br>
+        <b>border:</b>
+        <li><b>Description: </b>Sets the width, style, and color of the border.</li>
+        <li><b>Values: </b>&lt;border-width&gt; &lt;border-style&gt; &lt;color&gt;</li>
+        <li><b>Example: </b>border: 1px solid black;</li>
+        <br>
+        <b>border-width:</b>
+        <li><b>Description: </b>Sets the width of the border.</li>
+        <li><b>Values: </b>thin, medium, thick, &lt;length&gt;</li>
+        <li><b>Example: </b>border-width: 2px;</li>
+        <br>
+        <b>border-style:</b>
+        <li><b>Description: </b>Sets the style of the border.</li>
+        <li><b>Values: </b>none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</li>
+        <li><b>Example: </b>border-style: solid;</li>
+        <br>
+        <b>border-color:</b>
+        <li><b>Description: </b>Sets the color of the border.</li>
+        <li><b>Values: </b>&lt;color&gt;</li>
+        <li><b>Example: </b>border-color: blue;</li>
+        <br>
+        <b>box-sizing:</b>
+        <li><b>Description: </b>Defines how the width and height of an element are calculated.</li>
+        <li><b>Values: </b>content-box, border-box</li>
+        <li><b>Example: </b>box-sizing: border-box;</li>
+        <br><br>
+    
+        <h4>Background Properties:</h4>
+        <br>
+        <b>background:</b>
+        <li><b>Description: </b>Shorthand for all background properties.</li>
+        <li><b>Values: </b>&lt;bg-color&gt; &lt;bg-image&gt; &lt;bg-position&gt; &lt;bg-size&gt; &lt;bg-repeat&gt; &lt;bg-origin&gt; &lt;bg-clip&gt; &lt;bg-attachment&gt;</li>
+        <li><b>Example: </b>background: #fff url('image.jpg') no-repeat right top;</li>
+        <br>
+        <b>background-color:</b>
+        <li><b>Description: </b>Sets the background color of an element.</li>
+        <li><b>Values: </b>&lt;color&gt;</li>
+        <li><b>Example: </b>background-color: #ff0000;</li>
+        <br>
+        <b>background-image:</b>
+        <li><b>Description: </b>Sets the background image of an element.</li>
+        <li><b>Values: </b>url(&lt;url&gt;), none</li>
+        <li><b>Example: </b>background-image: url('background.jpg');</li>
+        <br>
+        <b>background-position:</b>
+        <li><b>Description: </b>Sets the initial position of the background image.</li>
+        <li><b>Values: </b>&lt;percentage&gt;, &lt;length&gt;, left, center, right, top, bottom</li>
+        <li><b>Example: </b>background-position: center center;</li>
+        <br>
+        <b>background-size:</b>
+        <li><b>Description: </b>Sets the size of the background image.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, cover, contain</li>
+        <li><b>Example: </b>background-size: cover;</li>
+        <br>
+        <b>background-repeat:</b>
+        <li><b>Description: </b>Sets how the background image is repeated.</li>
+        <li><b>Values: </b>repeat, repeat-x, repeat-y, no-repeat, space, round</li>
+        <li><b>Example: </b>background-repeat: no-repeat;</li>
+        <br>
+        <b>background-attachment:</b>
+        <li><b>Description: </b>Sets whether the background image is fixed or scrolls with the rest of the page.</li>
+        <li><b>Values: </b>scroll, fixed, local</li>
+        <li><b>Example: </b>background-attachment: fixed;</li>
+        <br>
+        <b>background-clip:</b>
+        <li><b>Description: </b>Defines how far the background image extends within an element.</li>
+        <li><b>Values: </b>border-box, padding-box, content-box </li>
+        <li><b>Example: </b>background-clip: border-box;</li>
+        <br>
+        <b>background-origin:</b>
+        <li><b>Description: </b>Sets the background positioning area.</li>
+        <li><b>Values: </b>border-box, padding-box, content-box </li>
+        <li><b>Example: </b>background-origin: padding-box;</li>
+        <br><br>
+    
+        <h4>Positioning Properties:</h4>
+        <br>
+        <b>position:</b>
+        <li><b>Description: </b>Specifies the type of positioning method used for an element.</li>
+        <li><b>Values: </b>static, relative, absolute, fixed, sticky</li>
+        <li><b>Example: </b>position: absolute;</li>
+        <br>
+        <b>top:</b>
+        <li><b>Description: </b>Specifies the top position of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, auto</li>
+        <li><b>Example: </b>top: 10px;</li>
+        <br>
+        <b>right:</b>
+        <li><b>Description: </b>Specifies the right position of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, auto</li>
+        <li><b>Example: </b>right: 10px;</li>
+        <br>
+        <b>bottom:</b>
+        <li><b>Description: </b>Specifies the bottom position of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, auto</li>
+        <li><b>Example: </b>bottom: 10px;</li>
+        <br>
+        <b>left:</b>
+        <li><b>Description: </b>Specifies the left position of an element.</li>
+        <li><b>Values: </b>&lt;length&gt;, &lt;percentage&gt;, auto</li>
+        <li><b>Example: </b>left: 10px;</li>
+        <br>
+        <b>z-index:</b>
+        <li><b>Description: </b>Sets the z-order of a positioned element.</li>
+        <li><b>Values: </b>&lt;integer&gt;</li>
+        <li><b>Example: </b>z-index: 1;</li>
+        <br><br>
+    
+        <h4>Display and Visibility Properties:</h4>
+        <br>
+        <b>display:</b>
+        <li><b>Description: </b>Specifies the display behavior of an element.</li>
+        <li><b>Values: </b>none, block, inline, inline-block, flex, inline-flex, grid, inline-grid, table, table-row, table-cell</li>
+        <li><b>Example: </b>display: block;</li>
+        <br>
+        <b>visibility:</b>
+        <li><b>Description: </b>Specifies whether an element is visible or not.</li>
+        <li><b>Values: </b>visible, hidden, collapse</li>
+        <li><b>Example: </b>visibility: hidden;</li>
+        <br><br>
+    
+        <h4>Overflow Properties:</h4>
+        <br>
+        <b>overflow:</b>
+        <li><b>Description: </b>Specifies what happens if content overflows an element's box.</li>
+        <li><b>Values: </b>visible, hidden, scroll, auto</li>
+        <li><b>Example: </b>overflow: hidden;</li>
+        <br>
+        <b>overflow-x:</b>
+        <li><b>Description: </b>Specifies the handling of horizontal overflow.</li>
+        <li><b>Values: </b>visible, hidden, scroll, auto</li>
+        <li><b>Example: </b>overflow-x: scroll;</li>
+        <br>
+        <b>overflow-y:</b>
+        <li><b>Description: </b>Specifies the handling of vertical overflow.</li>
+        <li><b>Values: </b>visible, hidden, scroll, auto</li>
+        <li><b>Example: </b>overflow-y: scroll;</li>
+        <br><br>
+    
+        <h4>Transition and Animation Properties:</h4>
+        <br>
+        <b>transition:</b>
+        <li><b>Description: </b>Shorthand for transition-property, transition-duration, transition-timing-function, and transition-delay.</li>
+        <li><b>Values: </b>&lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;</li>
+        <li><b>Example: </b>transition: all 0.3s ease;</li>
+        <br>
+        <b>transition-property:</b>
+        <li><b>Description: </b>Specifies the CSS property to which a transition effect should be applied.</li>
+        <li><b>Values: </b>none, all, &lt;property&gt;</li>
+        <li><b>Example: </b>transition-property: opacity;</li>
+        <br>
+        <b>transition-duration:</b>
+        <li><b>Description: </b>Specifies how long the transition effect takes to complete.</li>
+        <li><b>Values: </b>&lt;time&gt;</li>
+        <li><b>Example: </b>transition-duration: 0.5s;</li>
+        <br>
+        <b>transition-timing-function:</b>
+        <li><b>Description: </b>Specifies the speed curve of the transition effect.</li>
+        <li><b>Values: </b>linear, ease, ease-in, ease-out, ease-in-out, step-start, step-end, steps(&lt;integer&gt;, [ start | end ]), cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</li>
+        <li><b>Example: </b>transition-timing-function: ease-in;</li>
+        <br>
+        <b>transition-delay:</b>
+        <li><b>Description: </b>Specifies when the transition effect will start.</li>
+        <li><b>Values: </b>&lt;time&gt;</li>
+        <li><b>Example: </b>transition-delay: 0.2s;</li>
+        <br>
+        <b>animation:</b>
+        <li><b>Description: </b>Shorthand for all animation properties.</li>
+        <li><b>Values: </b>&lt;name&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt; &lt;iteration-count&gt; &lt;direction&gt; &lt;fill-mode&gt; &lt;play-state&gt;</li>
+        <li><b>Example: </b>animation: slide-in 3s ease-in-out 1s infinite alternate;</li>
+        <br>
+        <b>animation-name:</b>
+        <li><b>Description: </b>Specifies the name of the keyframes animation.</li>
+        <li><b>Values: </b>&lt;keyframes-name&gt;</li>
+        <li><b>Example: </b>animation-name: slide-in;</li>
+        <br>
+        <b>animation-duration:</b>
+        <li><b>Description: </b>Specifies the duration of the animation.</li>
+        <li><b>Values: </b>&lt;time&gt;</li>
+        <li><b>Example: </b>animation-duration: 3s;</li>
+        <br>
+        <b>animation-timing-function:</b>
+        <li><b>Description: </b>Specifies the speed curve of the animation.</li>
+        <li><b>Values: </b>linear, ease, ease-in, ease-out, ease-in-out, step-start, step-end, steps(&lt;integer&gt;, [ start | end ]), cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</li>
+        <li><b>Example: </b>animation-timing-function: ease-in-out;</li>
+        <br>
+        <b>animation-delay:</b>
+        <li><b>Description: </b>Specifies when the animation will start.</li>
+        <li><b>Values: </b>&lt;time&gt;</li>
+        <li><b>Example: </b>animation-delay: 1s;</li>
+        <br>
+        <b>animation-iteration-count:</b>
+        <li><b>Description: </b>Specifies the number of times an animation should be played.</li>
+        <li><b>Values: </b>&lt;number&gt;, infinite</li>
+        <li><b>Example: </b>animation-iteration-count: infinite;</li>
+        <br>
+        <b>animation-direction:</b>
+        <li><b>Description: </b>Specifies whether the animation should play in reverse on alternate cycles.</li>
+        <li><b>Values: </b>normal, reverse, alternate, alternate-reverse</li>
+        <li><b>Example: </b>animation-direction: alternate;</li>
+        <br>
+        <b>animation-fill-mode:</b>
+        <li><b>Description: </b>Specifies how a CSS animation applies styles to its target before and after it is executing.</li>
+        <li><b>Values: </b>none, forwards, backwards, both</li>
+        <li><b>Example: </b>animation-fill-mode: forwards;</li>
+        <br>
+        <b>animation-play-state:</b>
+        <li><b>Description: </b>Specifies whether the animation is running or paused.</li>
+        <li><b>Values: </b>running, paused</li>
+        <li><b>Example: </b>animation-play-state: paused;</li>
+        <br><br>
+    
+
+
+
+
+    </div>
+</body>
+</html>

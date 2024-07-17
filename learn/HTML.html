@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="HTML.css">
+</head>
+<body>
+    <div id="header">
+        <h1>yoh!</h1>
+    </div>
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/learn.html">Learn</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="#">Feed</a></li>
+        </ul>
+    </nav>
+    <div id="main-content">
+        <h1>1. Notes:-</h1><br><br>
+        <h4>What is HTML?</h4>
+        <p>HTML stands for Hypertext Markup Language. It's not a programming language but rather a markup language used to structure content on the web.</p><br>
+        <h4>Basic Structure of an HTML Document:</h4>
+        <pre><b>HTML</b>
+        &lt;!DOCTYPE html&gt;
+        &lt;html>&gt;
+        &lt;head&gt;
+            &lt;title&gt;Title of the Page&lt;/title&gt;
+            
+
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;!-- Content goes here --&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+        </pre><br><br>
+
+        <b>Let's break down each part:</b><br>
+
+        <p>- &lt;!DOCTYPE html&gt;`: This declaration tells the browser that the document is written in HTML4.<br>
+        - &lt;html&gt;: This is the root element of the HTML page. All other elements are nested inside it.<br>
+        - &lt;head&gt;: This section contains meta-information about the document such as the title, links to stylesheets, and scripts.<br>
+        - &lt;title&gt;: This element sets the title of the web page, which appears in the browser's title bar or tab.<br>
+        - &lt;body&gt;: This is where the main content of the web page goes.</p><br>
+
+        <h4>HTML Elements and Tags:</h4>
+
+        <p>HTML elements are the building blocks of a webpage. They are represented by tags enclosed in angle brackets. Tags usually come in pairs—an opening tag and a closing tag.</p>
+        <br>
+        <b>Example:</b>
+        <br>
+        <p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p><br>
+
+        <b>In this example:</b>
+        <p>- &lt;p&gt; is the opening tag.<br>
+        - &lt;/p&gt; is the closing tag.<Br>
+        - `This is a paragraph.` is the content of the paragraph.</p><br>
+
+        <h4>Attributes:</h4>
+
+        <p>HTML elements can have attributes, which provide additional information about the element. Attributes are placed within the opening tag and are written as name-value pairs.</p>
+        <br>
+        <b>Example:</b>
+        <br>
+        <pre>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</pre><br>
+        <br>
+        <b>In this example:</b>
+        <p>- &lt;a&gt; is the anchor tag used to create hyperlinks.<br>
+        - href is the attribute, which specifies the URL the link goes to.<br>
+        - "https://www.example.com" is the value of the `href` attribute.<br>
+        - `Visit Example` is the text displayed as the link.<br></p>
+        <br>
+        <h4>Common HTML Elements:</h4>
+        <br>
+        <b>Here are some common HTML elements used to structure content:</b>
+
+        <p>- &lt;h1&gt; to &lt;h6&gt;: Headings (from most important &lt;h1&gt; to least important &lt;h6&gt;).<br>
+        - &lt;p&gt;: Paragraph.<br>
+        - &lt;a&gt;: Anchor (creates a hyperlink).<br>
+        - &lt;img&gt;: Image.<br>
+        - &lt;ul&gt;: Unordered list.<br>
+        - &lt;ol&gt;: Ordered list.<br>
+        - &lt;li&gt;: List item.<br></p>
+        <br>
+        <h4>Comments:</h4>
+
+        <p>You can add comments to your HTML code to make it more readable. Comments are not displayed in the browser.</p>
+        <br>
+        <b>Example:</b><br>
+
+        <pre>&lt;!-- This is a comment --&gt;</pre>
+        <br><br>
+        <h4>Whitespace:</h4>
+
+        <p>HTML ignores extra whitespace, like spaces, tabs, and newlines, so you can format your code for readability.</p>
+        <br>
+        <h4>Self-Closing Tags:</h4>
+
+        <p>Some HTML elements don't have closing tags and are self-closing.</p>
+            <br>
+        <b>Example:</b><br>
+
+        <pre>&lt;img src="image.jpg" alt="Description"&gt;</pre><br>
+        <br>
+
+        <b>In this example:</b>
+        <p>&lt;img&gt; is a self-closing tag used to display images.</p>
+        <br>
+        <h4>Conclusion:</h4>
+
+        <p>This is a very basic introduction to HTML, but it covers the fundamental concepts you need to get started. From here, you can begin creating simple web pages and gradually explore more advanced topics like CSS (Cascading Style Sheets) for styling and JavaScript for interactivity. Let me know if you want to delve deeper into any specific aspect!</p><br>
+        <hr>
+
+<!-- -------------------------------------------------------------------------------- -->
+        <hr><br>
+
+        <h1 id="common html tags">Here's a list of common HTML tags:-</h1>
+        <h4>Basic Strunture:</h4>
+        <li><b>&lt;html&gt;</b>: The root element that encompasses all other HTML content.</li>
+        <li><b>&lt;head&gt;</b>: Contains meta-information about the document, such as its title and links to stylesheets.</li>
+        <li><b>&lt;title&gt;</b>: Sets the title of the webpage, which appears in the browser tab.</li>
+        <li><b>&lt;body&gt;</b>: Contains the content of the webpage that is visible to users.</li>
+        <br>
+        <h4>Text Content:</h4>
+        <li><b>&lt;h1&gt; to &lt;h6&gt;</b>: Heading tags, `&lt;h1&gt;` being the highest level and `&lt;h6&gt;` the lowest.</li>
+        <li><b>&lt;p&gt;</b>: Defines a paragraph of text.</li>
+        <li><b>&lt;br&gt;</b>: Inserts a line break.</li>
+        <li><b>&lt;hr&gt;</b>: Inserts a horizontal rule (a horizontal line).</li>
+        <li><b>&lt;blockquote&gt;</b>: Indicates a section that is quoted from another source.</li>
+        <li><b>&lt;pre&gt;</b>: Displays preformatted text, preserving whitespace and line breaks.</li>
+        <br>
+        <h4>Text Formatting:</h4>
+        <li><b>&lt;b&gt;</b>: Makes text bold.</li>
+        <li><b>&lt;i&gt;</b>: Makes text italic.</li>
+        <li><b>&lt;strong&gt;</b>: Indicates strong emphasis, typically displayed as bold.</li>
+        <li><b>&lt;em&gt;</b>: Indicates emphasis, typically displayed as italic.</li>
+        <li><b>&lt;u&gt;</b>: Underlines text.</li>
+        <li><b>&lt;mark&gt;</b>: Highlights text.</li>
+        <li><b>&lt;small&gt;</b>: Reduces the font size of the text.</li>
+        <li><b>&lt;sub&gt;</b>: Displays text as subscript.</li>
+        <li><b>&lt;sup&gt;</b>: Displays text as superscript.</li>
+        <li><b>&lt;del&gt;</b>: Shows deleted text, usually as strikethrough.</li>
+        <li><b>&lt;ins&gt;</b>: Shows inserted text, usually underlined.</li>
+        <br>
+        <h4>Link and Media:</h4>
+        <li><b>&lt;a&gt;</b>: Creates a hyperlink to another page or resource.</li>
+        <li><b>&lt;img&gt;</b>: Embeds an image.</li>
+        <li><b>&lt;audio&gt;</b>: Embeds audio content.</li>
+        <li><b>&lt;video&gt;</b>: Embeds video content.</li>
+        <li><b>&lt;source&gt;</b>: Specifies multiple media resources for media elements like `&lt;audio&gt;` and `&lt;video&gt;.`</li>
+        <li><b>&lt;iframe&gt;</b>: Embeds another HTML page within the current page.</li>
+        <br>
+        <h4>Lists: </h4>
+        <li><b>&lt;ul&gt;</b>: Creates an unordered (bulleted) list.</li>
+        <li><b>&lt;ol&gt;</b>: Creates an ordered (numbered) list.</li>
+        <li><b>&lt;li&gt;</b>: Defines a list item.</li>
+        <li><b>&lt;dl&gt;</b>: Defines a description list.</li>
+        <li><b>&lt;dt&gt;</b>: Defines a term/name in a description list.</li>
+        <li><b>&lt;dd&gt;</b>: Defines a description of a term/name in a description list.</li>
+        <br>
+        <h4>Tables:</h4>
+        <li><b>&lt;table&gt;</b>: Defines a table.</li>
+        <li><b>&lt;tr&gt;</b>: Defines a table row.</li>
+        <li><b>&lt;td&gt;</b>: Defines a table cell.</li>
+        <li><b>&lt;th&gt;</b>: Defines a header cell in a table.</li>
+        <li><b>&lt;thead&gt;</b>: Groups the header content in a table.</li>
+        <li><b>&lt;tbody&gt;</b>: Groups the body content in a table.</li>
+        <li><b>&lt;tfoot&gt;</b>: Groups the footer content in a table.</li>
+        <li><b>&lt;caption&gt;</b>: Provides a caption for the table.</li>
+        <br>
+        <h4>Forms:</h4>
+        <li><b>&lt;form&gt;</b>: Creates an HTML form for user input.</li>
+        <li><b>&lt;input&gt;</b>: Defines an input control.</li>
+        <li><b>&lt;textarea&gt;</b>: Defines a multiline text input control.</li>
+        <li><b>&lt;button&gt;</b>: Defines a clickable button.</li>
+        <li><b>&lt;label&gt;</b>: Defines a label for an input element.</li>
+        <li><b>&lt;select&gt;</b>: Creates a drop-down list.</li>
+        <li><b>&lt;option&gt;</b>: Defines an option in a drop-down list.</li>
+        <li><b>&lt;fieldset&gt;</b>: Groups related elements in a form.</li>
+        <li><b>&lt;legend&gt;</b>: Defines a caption for a `&lt;fieldset&gt;`</li>
+        <br>
+        <h4>Semantic Elements:</h4>
+        <li><b>&lt;header&gt;</b>: Defines a header section for a document or section.</li>
+        <li><b>&lt;nav&gt;</b>: Defines a set of navigation links.</li>
+        <li><b>&lt;section&gt;</b>: Defines a section in a document.</li>
+        <li><b>&lt;article&gt;</b>: Defines an independent, self-contained article.</li>
+        <li><b>&lt;aside&gt;</b>: Defines content aside from the main content (like a sidebar).</li>
+        <li><b>&lt;footer&gt;</b>: Defines a footer for a document or section.</li>
+        <li><b>&lt;main&gt;</b>: Specifies the main content of a document.</li>
+        <li><b>&lt;figure&gt;</b>: Specifies self-contained content, like illustrations, diagrams, or photos.</li>
+        <li><b>&lt;figcaption&gt;</b>: Provides a caption for a `&lt;figure&gt;` element.</li>
+        <br>
+        <h4>Meta-Information:</h4>
+        <li><b>&lt;meta&gt;</b>: Defines metadata about an HTML document.</li>
+        <li><b>&lt;link&gt;</b>: Links to external resources like stylesheets.</li>
+        <li><b>&lt;style&gt;</b>: Embeds CSS styles within the HTML document.</li>
+        <li><b>&lt;script&gt;</b>: Embeds or references JavaScript code.</li>
+        <br>
+        <h4>Miscellaneous:</h4>
+        <li><b>&lt;div&gt;</b>: Defines a division or section, used as a container for other elements.</li>
+        <li><b>&lt;span&gt;</b>: Defines a section in a document for inline elements.</li>
+        <br><hr>
+        <!-- --------------------------------------------------------------------------------------- -->
+        <hr><br>
+        
+        <h1>References:-</h1>
+        <h4>Video(s) for better Understanding:</h4>
+        <iframe id="apna-college-video" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=t0MljhRfXM0vQc-G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <hr>
+        <h4>:</h4>
+        <iframe src="https://developer.mozilla.org/en-US/docs/Web/HTML" frameborder="0"></iframe>
+
+
+
+    </div>
+</body>
+</html>

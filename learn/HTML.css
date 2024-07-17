@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 8px;
+    background-image: url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+#header {
+    height: 2cm;
+    width: calc(100% - 16px);
+    border-radius: 5px;
+    background-color: #18212f;
+    color: white;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+}
+
+#sidebar {
+    background-color: #2e2e2e;
+    width: 180px;
+    border-radius: 5px;
+    height: calc(100% - 2cm - 24px);
+    position: fixed;
+    z-index: 2;
+    top: calc(2cm + 16px);
+    box-sizing: border-box;
+}
+
+#sidebar a, #sidebar li {
+    text-decoration: none;
+    list-style: none;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#sidebar li:hover {
+    background-color: #4c4c4c;
+}
+
+#main-content {
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    top: calc(2cm + 8px);
+    left: 188px;
+    width: calc(100% - 188px);
+}
+
+pre {
+    border-radius: 3px;
+    border: 1px solid black;
+    display: inline-block;
+    background-color: rgb(229, 229, 229);
+
+}
+h4 {
+    font-size: 25px;
+}
+
+p, b, li {
+    font-size: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+@media (max-width: 600px){
+    #sidebar {
+        position: relative;
+        width: 100%;
+        top: calc(2cm + 8px);
+        height: 2cm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    #sidebar li {
+        display: inline;
+    }
+
+    #main-content {
+        position: relative;
+        top: calc(2cm + 16px);
+        left: 0;
+        width: 100%;
+    }
+}
+
