@@ -15,7 +15,7 @@ body {
 
 #header {
     height: 2cm;
-    width: calc(100% - 16px);
+    width: 100vw;
     border-radius: 5px;
     background-color: #18212f;
     color: white;
